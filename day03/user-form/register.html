@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>User Registration</h1>
+    <form action="#" method="POST" id="registration-form">
+      <p class="form-group required">
+        <label for="name">이름 :</label>
+        <input type="text" id="name" name="name" placeholder="홍길동" />
+      </p>
+      <p class="form-group required">
+        <label for="email">이메일 :</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="이메일을 입력하십시오."
+        />
+      </p>
+      <p class="form-group required">
+        <label for="password">비밀번호 :</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="비밀번호"
+        />
+      </p>
+      <p class="form-group">
+        <label for="birthdate">생년월일 :</label>
+        <input
+          type="date"
+          id="birthdate"
+          name="birthdate"
+          min="1800-01-01"
+          max="2036-06-30"
+          value="date"
+        />
+      </p>
+      <p class="form-group">
+        <label for="age">나이 :</label>
+        <input type="number" id="age" name="age" min="1" max="100" />
+      </p>
+      <p class="form-group">
+        <label for="satisfaction">서비스 만족도 :</label>
+        <input
+          type="range"
+          id="satisfaction"
+          name="satisfaction"
+          min="1"
+          max="10"
+        />
+      </p>
+      <p class="form-group">
+        <label>성별 :</label><br />
+        <input type="radio" id="male" name="sex" value="male" />
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="sex" value="female" />
+        <label for="female">여성</label>
+        <input type="radio" id="other" name="sex" value="other" />
+        <label for="other">기타</label>
+      </p>
+      <p class="form-group">
+        <label>관심사 :</label><br />
+        <input type="checkbox" id="reading" name="interests" value="reading" />
+        <label for="reading">독서</label>
+        <input type="checkbox" id="gaming" name="interests" value="gaming" />
+        <label for="gaming">게임</label>
+        <input type="checkbox" id="cooking" name="interests" value="cooking" />
+        <label for="cooking">요리</label>
+      </p>
+      <p class="form-group">
+        <label for="country">국가 :</label>
+        <select id="country" name="country">
+          <option value="kr">대한민국</option>
+          <option value="us">미국</option>
+          <option value="jp">일본</option>
+          <option value="cn">중국</option>
+          <option value="uk">영국</option>
+        </select>
+      </p>
+      <p>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+      </p>
+    </form>
+  </body>
+</html>

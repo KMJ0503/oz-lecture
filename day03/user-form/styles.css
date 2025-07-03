@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+h1::after {
+  content: "✨";
+  margin-left: 10px;
+}
+form p {
+  padding: 5px;
+}
+form > p {
+  border-bottom: 1px solid #a8a7a7;
+}
+form p:first-child {
+  margin-top: 20px;
+}
+label {
+  display: inline-block;
+  width: 100px;
+}
+select {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
+input:hover,
+label:hover,
+select:hover {
+  cursor: pointer;
+  border-color: #007bff;
+}
+.form-group {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.form-group::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #ddd;
+  margin-top: 10px;
+}
+#registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+[type="text"],
+[type="email"],
+[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+[type="submit"],
+[type="reset"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+[type="submit"]:hover,
+[type="reset"]:hover {
+  background-color: #0056b3;
+}
+.required label::after {
+  content: "*";
+  color: red;
+}

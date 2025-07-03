@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Registration Form</title>
+    </head>
+    <body>
+        <header style="background-color: gray;">
+            <h1>User Registration</h1>
+        </header>
+        <!-- 폼 시작 -->
+        <div>
+            <form action="#" method="post">
+                <p>이름 : <input type="text" id="nolabel" name="name" placeholder="홍길동"></p>
+                <p>이메일 : <input type="email" id="nolabel" name="email" placeholder="example@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="이메일을 입력하십시오."></p>
+                <p>비밀번호 : <input type="password" id="nolabel" name="password" placeholder="비밀번호"></p>
+                <p>생년월일 : <input type="date" id="nolabel" name="date" min="1800-01-01" max="2036-06-30" value="date"></p>
+                <p>나이 : <input type="number" id="nolabel" name="age" min="1" max="100"></p>
+                <p>서비스 만족도 : <input type="range" id="nolabel" name="satisfaction" min="1" max="10"></p>
+                <!-- 라벨 적용 -->   
+                <p>성별 : 
+                    <label><input type="radio" id="label" name="male" value="male">남성</label>
+                    <label><input type="radio" id="label" name="female" value="female">여성</label>
+                    <label><input type="radio" id="label" name="other" value="other">기타</label>
+                </p>
+                <!-- 라벨 for 적용 -->
+                <p>관심사 : 
+                    <input type="checkbox" id="readinglabel" name="reading" value="reading"><label for="readinglabel">독서</label>
+                    <input type="checkbox" id="gaminglabel" name="gaming" value="gaming"><label for="gaminglabel">게임</label>
+                    <input type="checkbox" id="cookinglabel" name="cooking" value="cooking"><label for="cookinglabel">요리</label>
+                </p>
+                <!-- 셀렉트 멀티플 적용 -->
+                <p>국가 : 
+                    <select name="nation" multiple>
+                    <option value="Korea">한국</option>
+                    <option value="USA">미국</option>                    
+                    <option value="Japan">일본</option>
+                    <option value="China">중국</option>
+                    </select>
+                </p>
+                <div>
+                    <button type="submit">제출</button>
+                    <button type="reset">초기화</button>
+                </div>
+            </form>
+        </div>
+    </body>
