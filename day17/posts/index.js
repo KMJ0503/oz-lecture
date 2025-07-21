@@ -1,11 +1,10 @@
-// list.js (포스트 목록 화면용 JavaScript)
-const apiUrl = "https://jsonplaceholder.typicode.com";
+import { API_URL } from "../util/consts/api-consts.js";
 
 // 포스트 목록 표시
 async function displayPosts() {
   // 포스트 데이터 가져오기
   try {
-    const response = await fetch(`${apiUrl}/posts`);
+    const response = await fetch(`${API_URL}/posts`);
     if (!response.ok) throw new Error("Failed to fetch posts");
     const posts = await response.json();
 
@@ -17,7 +16,7 @@ async function displayPosts() {
       li.dataset.postId = post.id;
       // 포스트 클릭 시 상세 페이지로 이동
       li.addEventListener("click", () => {
-        window.location.href = `detail.html?postId=${post.id}`;
+        window.location.href = `view/index.html?postId=${post.id}`;
       });
       postList.appendChild(li);
     });
